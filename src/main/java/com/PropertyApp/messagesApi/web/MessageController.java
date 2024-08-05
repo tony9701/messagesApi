@@ -41,7 +41,6 @@ public class MessageController {
         return new ResponseEntity<>(createdMessage, HttpStatus.CREATED);
     }
 
-    //TODO security
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMessage(@PathVariable Long id) {
         messageService.deleteMessage(id);
